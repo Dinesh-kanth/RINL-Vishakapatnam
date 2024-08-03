@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+}
+
+header img {
+    height: 8em;
+    width: 10em;
+    margin-right: 20px;
+}
+
+.title{
+    margin-left: -40px;
+    margin-top: 30px;
+}
+
+.title .t1 {
+    font-size: 2em;
+    color: rgb(1, 1, 97);
+}
+
+.title .t2 {
+    font-size: 1.5em;
+    color: green;
+}
+
+.title .t3 {
+    font-size: 1em;
+    color: gray;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signup {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 20em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: border 0.3s ease;
+}
+.signup form .button{
+    margin-left: 80px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 10px;
+    width: 7em;
+}
+.signup form input:focus {
+    border: 1px solid #333;
+}
+.ip, .em{
+    color: red;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .signup {
+        width: 90%;
+    }
+
+    .signup form {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    .title .t1, .title .t2, .title .t3 {
+        font-size: 1em;
+    }
+}
